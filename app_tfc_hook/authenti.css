@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;1,200;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;1,100;1,200;1,300;1,400;1,500&family=Source+Sans+Pro:ital,wght@0,300;1,200;1,300&display=swap');
+:root{
+    --green:#27ae60;
+    --black:#192a56;
+    --light-color:#666;
+    --box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, 0.1) ;
+}
+*{
+    font-family:'Raleway', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition:all .2s linear;
+}
+html{
+    font-size: 65.5%;
+    scroll-padding-top: 5.5rem;
+    scroll-behavior: smooth;
+
+}
+header{
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    background: #fff;
+    padding: 1.5rem 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: var(--box-shadow)!important;
+    margin-bottom: 20rem;
+}
+header #logo{
+    color: var(--black)!important;
+    font-size: 2.5rem!important;
+    font-weight: bold!important;
+}
+header #logo i{
+    color: var(--green)!important;
+}
+header .navbar a{
+    font-size: 1.7rem;
+    border-radius: .5rem;
+    padding: .5rem 1.5rem;
+    color: var(--light-color);
+}
+header .navbar a #active{
+    color: #fff;
+    background: var(--green)!important;
+}
+header .navbar a:hover{
+    color: #fff;
+    background: var(--green)!important;
+}
+header .icons i{
+    cursor: pointer;
+    margin-left: .6rem;
+    height: 4.5rem;
+    line-height: 4.5rem;
+    text-align: center;
+    font-size: 1.7rem;
+    color: var(--black);
+    border-radius: 50%;
+    background: #eee;
+}
+header .icons a{
+    cursor: pointer;
+    margin-left: .6rem;
+    height: 4.5rem;
+    line-height: 4.5rem;
+    text-align: center;
+    font-size: 1.7rem;
+    color: var(--black);
+    border-radius: 50%;
+    background: #eee;
+    padding: .5rem 1.5rem;
+}
+header .icons i{
+    cursor: pointer;
+    margin-left: .6rem;
+    height: 4.5rem;
+    line-height: 4.5rem;
+    text-align: center;
+    font-size: 1.7rem;
+    color: var(--black);
+    border-radius: 50%;
+    background: #eee;
+    padding: .5rem 1.5rem;
+}
+
+header .icons i:hover{
+    color: #fff;
+    background: var(--green)!important;
+    transform: rotate(360deg);
+}
+header .icons a:hover{
+    color: #fff;
+    background: var(--green)!important;
+    transform: rotate(360deg);
+}
+header .icons #menu-bars{
+    display: none;
+}
+.menu form{
+    max-width: 90rem;
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    border: .1rem solid #fff;
+    background: #fff;
+    padding: 1.5rem;
+    margin-top:90px!important;
+    margin: 0 auto;
+    margin-top: 10rem!important;
+}
+.sub-heading{
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--light-color);
+}
+.heading{
+    font-weight: bold;
+    color: var(--black);
+    text-align: center!important;
+    margin-bottom: 3rem;
+}
+
+.menu form .inputBox{
+    display: block;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.menu form .inputBox .input{
+    width: 48%;
+    margin-left: 17rem;
+}
+.menu form .inputBox .input span{
+    display: block;
+    padding: .5rem 0;
+    font-size: 1.5rem;
+    color: var(--light-color); 
+}
+.menu form .inputBox .input input{
+   background:#eee;
+   border-radius: .5rem;
+   padding: 1rem;
+   font-size: 1.6rem;
+   color: var(--black);
+   text-transform: none;
+   cursor: pointer;
+   margin-bottom: 1rem;
+   width: 100%;
+}
+
+.menu form .inputBox .btn{
+    margin-top: 0;
+    margin: 23px;
+}
+.menu .inputBox .btn_right{
+    background: var(--black);
+    display: block;
+    padding: .5rem 0;
+    font-size: 1.5rem;
+    border-radius: .5rem;
+   padding: 1rem;
+   font-size: 1.6rem;
+   color: var(--black);
+   text-transform: none;
+   cursor: pointer;
+   margin-bottom: 1rem;
+   width: 15rem;
+   color:#fff;
+   font-weight: bold;
+   position: relative;
+   margin-top: 10px;
+   margin-left: 24rem;
+   width: 30%!important;
+
+}
+
+.menu .inputBox .btn_right:hover,
+.menu .inputBox .btn_left:hover{
+     background: var(--green);
+}
