@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      .error {
+        background-color: red;
+      }
+      .success {
+        background-color: green;
+      }
+    </style>
+    <form action="" id="form">
+      <input type="password" name="" id="test" max="20" min="4" />
+      <div id="msgBox"></div>
+      <button id="btn">test</button>
+    </form>
+    <script>
+      const test = document.getElementById("test");
+      const form = document.getElementById("form");
+
+      console.log(test.parentElement);
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        // setError(test,'test')
+        Render("error", "ça va");
+      });
+
+      const Render = (status, message) => {
+        if (status == "error") {
+          msgBox.innerHTML = `<div class="error">${message}</div>`;
+        } else {
+          msgBox.innerHTML = `<div class="success">${message}</div>`;
+        }
+      };
+      //   const setError = (element,message) =>{
+      //     const inputControl = element.parentElement;
+      //     // console.log(inputControl);
+      //     // console.log();
+      //     const errorDisplay = inputControl.childNodes[3];
+
+      //     errorDisplay.innerText = message;
+      //     inputControl.ClassList.add('error');
+      //     // inputControl.ClassList.remove('success');
+
+      // }
+    </script>
+  </body>
+</html>

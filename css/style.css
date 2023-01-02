@@ -1,0 +1,60 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+form{
+    width: 40%;
+    margin: 20px auto;
+    height: 400px;
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+form, .input, button{
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    overflow: hidden;
+}
+form .input{
+   
+    display: grid;
+    grid-template-columns: 15% 2fr;
+}
+form button, .input{
+    width: 80%;
+    height: 40px;
+     text-align: center;
+}
+form button{
+    background: linear-gradient(to bottom, rgb(25, 48, 220), rgb(17, 6, 134));
+    color: #fff;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+}
+form .input i{
+    line-height: 40px;
+}
+form input{
+    border: none;
+    outline: none;
+}
+form .progress{
+    position: relative;
+    display: block;
+    background-color: aqua;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+    width: 0%;
+    top: -20px;
+    left: -30px;
+    height: 5px;
+}
+.test{
+    width: 80%;
+}

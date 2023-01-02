@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Hello App</h1>
+
+    <fieldset>
+      <form action="/users" method="post">
+        <input type="text" id="id" name="id" /><br /><br />
+        <input type="text" id="nom" name="nom" /><br /><br />
+        <button type="submit">send</button>
+      </form>
+    </fieldset>
+
+    <% for( let i = 0; i < data.length; i++ ) { %>
+    <li><%= data[i].id %></li>
+    <li><%= data[i].nom %></li>
+    <% } %>
+
+    <button>Button</button>
+  </body>
+</html>

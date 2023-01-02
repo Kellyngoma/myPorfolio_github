@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="./fontawesome-free-6.2.1-web/css/all.min.css"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <form id="form">
+      <div class="input">
+        <i class="fa fa-user"></i>
+        <input type="text" name="" id="" placeholder="Username" required />
+      </div>
+      <div class="input">
+        <i class="fa fa-envelope"></i>
+        <input type="email" name="" id="" placeholder="E-mail" required />
+      </div>
+      <div class="input">
+        <i class="fa fa-lock"></i>
+        <input
+          type="password"
+          name=""
+          id="password"
+          placeholder="Password"
+          maxlength="20"
+          minlength="4"
+          required
+        />
+      </div>
+      <span class="progress" id="prPassword"></span>
+      <div class="input">
+        <i class="fa fa-lock"></i>
+        <input
+          type="password"
+          name=""
+          id="confirmPassword"
+          placeholder="Confirm password"
+          maxlength="20"
+          minlength="4"
+          required
+        />
+      </div>
+      <span class="progress" id="prConPassword"></span>
+      <button id="btn-valid">valide</button>
+    </form>
+    <script src="./script.js"></script>
+  </body>
+</html>

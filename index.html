@@ -225,47 +225,25 @@
         </div>
       </div>
     </div>
+  </div>   
   </div>
-  <div class="container">
-    <div class="form">
-      <span class="search">Contact Me</span>
-     <div class="my_sections">
-      <select name="" id="start_select outer_shadow">
-        <option value="communes">municipalities</option>
-          <option  value="ngaliema">avenue</option>
-            <option  value="Mont-ngafula">piece</option>
-             <option  value="lemba">district</option>
-           <option  value="limete"></option>
-      </select>
-
-      <select name="" id="start_select">
-        <option value="produit saquin">Need</option>
-           <option value="produit saquin" value="globul_rouge">Create forum</option>
-            <option value="produit saquin" value="plasmat">One page</option>
-           <option value="produit saquin " value="plaquete">Blog</option>
-           <option value="produit saquin " value="plaquete">Advice</option>
-         </select>
-
-         <select name="" id="start_select">
-          <option value="volume">Level</option>
-           <option value="volume" value="25">beginner</option>
-             <option value="communes" value="45">junior web</option>
-               <option value="communes" value="75">Designer UI</option>
-               <option value="communes" value="75">Designer UX</option>
-              <option value="communes" value="35"> Fullstack Dev</option>
-         </select>
-         <select name="" id="start_select">
-             <option value="groupe">NetWork</option>
-          <option value="groupe" value="a">Fecabook</option>
-          <option value="groupe" value="b">WhatsApp</option>
-         </select>
-          <input id="my_input"  type="text" placeholder="Names">
+  <div>
+    <form  id="validation" >
+      <div class="inputs">
+        <input type="text"  id="name" placeholder="Your name"><br>
+         <span id="error"></span><br>
+        <input type=""  id="email" placeholder="E-mail"><br>
+         <span id="error_two"></span><br>
+        <input type="password" id="pwd" placeholder="Password" ><br>
+         <span id="error_tree"></span><br>
+        <input type="password"  id="pwd2" placeholder="Confirm password" minlength ="8" maxlength ="12"><br>
+         <span id="error_for"></span><br>
+        <button type="submit" id="validation">Sign Up</button>
       </div>
-      <a href=""  class=" btn_2 outer-shadow hover-in-shadow">Souscrire</a>
-    </div>
-  </div>
-  
-  
+     
+    </form>
+  </div>    
+
   
    <section class="footer" id="contact">
     <div id="box-container">
@@ -276,5 +254,6 @@
 
 <script type="text/javascript" src="ajouts/jquery.min.js"></script>
   <script type="text/javascript" src="ajouts/bootstrap.min.js"></script>
+  <script type="text/javascript" src="valide.js"></script>
 </body>
 </html>
