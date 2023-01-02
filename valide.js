@@ -27,8 +27,6 @@ const developpement = () =>{
    const valuePwd = passeword .value.trim();
    const valuePwd2 = passeword2.value.trim();
 
-    if(userValue != userName){
-
       if(userValue == ""){
          const setError = document.getElementById("error");
            setError.innerHTML = "Username est requis.";
@@ -62,8 +60,8 @@ const developpement = () =>{
       // //         setError.style.color = "#ff0000";
               
       //    }
-    }
-    if (emailValue != E_mail){
+    
+    
 
       if(emailValue == "" ){
          const errorTwo = document.getElementById("error_two");
@@ -78,7 +76,7 @@ const developpement = () =>{
              errorTwo.style.color ="#ff0000";        
 
       }
-   }
+   
     if (valuePwd != passeword){
 
       if (valuePwd == "" ){
@@ -94,7 +92,7 @@ const developpement = () =>{
          }
 
    }
-    if ( valuePwd2 != passeword2){
+    
 
       if(valuePwd2 == ""){
          const errorFor = document.getElementById("error_for");
@@ -106,9 +104,8 @@ const developpement = () =>{
           errorFor.innerHTML = "refférez vous de votre mot de passe.";
            errorFor.style.color = "#ff0000";
       }
-
-
-   }
+}
+   
 
     
    
@@ -123,7 +120,7 @@ const developpement = () =>{
      
       
 
-}
+
 
      
 
