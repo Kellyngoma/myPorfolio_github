@@ -1,4 +1,8 @@
 'user strict'
+
+// const e = require( "express" );
+
+
 //  recuperation of identity
 
 const userName = document.getElementById("name");
@@ -13,98 +17,119 @@ const form = document.getElementById("validation").addEventListener("submit",(e)
          e.preventDefault();
 
          developpement();
+         developpementSuccess();
+         
 });
-/**
- *#
- *
- */
-const developpement = () =>{
-   
-   let myRegex = /^['a-zA-Z']/;
+    const developpement = () =>{
+         let myRegex = /^['a-zA-Z']/;
 
-   const userValue = userName.value.trim();
-   const emailValue = E_mail.value.trim();
-   const valuePwd = passeword .value.trim();
-   const valuePwd2 = passeword2.value.trim();
-
-      if(userValue == ""){
-         const setError = document.getElementById("error");
-           setError.innerHTML = "Username est requis.";
-             setError.style.color ="#ff0000";
-          
+          const userValue = userName.value.trim();
+          const emailValue = E_mail.value.trim();
+          const valuePwd = passeword .value.trim();
+          const valuePwd2 = passeword2.value.trim();
+     
+       if(userValue == ""){
+             const setError = document.getElementById("error");
+               setError.innerHTML = "Name is required.";
+               setError.style.color ="#ff0000";
             
-      }else if(myRegex.test(userValue) == false){
-         const setError = document.getElementById("error");
-           setError.innerHTML = "Commmencer par une lettre.";
-             setError.style.color ="#ff0000";
+         }else if(myRegex.test(userValue) == false){
+          const setError = document.getElementById("error");
+            setError.innerHTML = "Start with a letter.";
+            setError.style.color ="#ff0000";
            
-         
-            
-       }
-       else if (userValue < 3){
+      }else {
+         let number = userValue.length;
+         if(number < 3){
             let setError = document.getElementById("error");
-              setError.innerHTML = "Le nom est trop court!";
-               setError.style.color = "#ff0000";
-       }
-       
-       
-       
-       
-       //else{
-      //    const setSuccess = document.getElementById("success");
-      //     setSuccess.innerHTML = "votre nom est bien enregistré!";
-      //      setSuccess.style.color = "#56c93f";
-      //      e.preventDefault();
-      // //       const setError = document.getElementById("error");
-      // //        setError.innerHTML = "votre nom est trop court!";
-      // //         setError.style.color = "#ff0000";
-              
-      //    }
-    
-    
-
-      if(emailValue == "" ){
-         const errorTwo = document.getElementById("error_two");
-         errorTwo.innerHTML = "Email est requis.";
-         errorTwo.style.color = "#ff0000";
-        
-      
-      }
-      else if(!emailValue.match("/^[a-z0-9._-]+@[a-z0-9._-]{2,}\.[a-z]{2,4}$/")){
-         const errorTwo = document.getElementById("error_two");
-            errorTwo.innerHTML = "Votre email est trop faible";
-             errorTwo.style.color ="#ff0000";        
-
-      }
-   
-    if (valuePwd != passeword){
-
-      if (valuePwd == "" ){
-         let errorTwo = document.getElementById("error_tree");
-         errorTwo.innerHTML = "Le mot de passe est requis.";
-          errorTwo.style.color ="#ff0000";
-
-         }else if(myRegex.test(valuePwd) == false ){
-            let errorTwo = document.getElementById("error_tree");
-             errorTwo.innerHTML = "Votre mot de passe est faible.";
-              errorTwo.style.color ="#ff0000";
-
+            setError.innerHTML = "The name is too short!";
+             setError.style.color = "#ff0000";
+             
          }
+         
+      }
+      //else{
+     //    const setSuccess = document.getElementById("success");
+     //     setSuccess.innerHTML = "votre nom est bien enregistré!";
+     //      setSuccess.style.color = "#56c93f";
+     //      e.preventDefault();
+     // //       const setError = document.getElementById("error");
+     // //        setError.innerHTML = "votre nom est trop court!";
+     // //         setError.style.color = "#ff0000";
+             
+     //    }
+   
 
-   }
+     if(emailValue == "" ){
+        const errorTwo = document.getElementById("error_two");
+        errorTwo.innerHTML = "Email is required.";
+        errorTwo.style.color = "#ff0000";
+       
+     
+     }
+   //   else if(!emailValue.match("/^[a-z0-9._-]+@[a-z0-9._-]{2,}\.[a-z]{2,4}$/")){
+   //      const errorTwo = document.getElementById("error_two");
+   //         errorTwo.innerHTML = "Votre email est trop faible";
+   //          errorTwo.style.color ="#ff0000";        
+
+   //   }
+     
+  
+
+     if (valuePwd == "" ){
+        let errorTwo = document.getElementById("error_tree");
+        errorTwo.innerHTML = "The password is required.";
+         errorTwo.style.color ="#ff0000";
+
+        }else if(myRegex.test(valuePwd) == false ){
+           let errorTwo = document.getElementById("error_tree");
+            errorTwo.innerHTML = "Your password is weak.";
+             errorTwo.style.color ="#ff0000";
+
+        }
+
+     if(valuePwd2 == ""){
+        const errorFor = document.getElementById("error_for");
+          errorFor.innerHTML = "The confirmation is required.";
+           errorFor.style.color = "#ff0000";
+        
+     }else if (valuePwd2 != valuePwd){
+        const errorFor = document.getElementById("error_for");
+         errorFor.innerHTML = "refer to your password.";
+          errorFor.style.color = "#ff0000"; 
+     }
+
+    }
+    const developpementSuccess = ()=>{
+
+      const userValue = userName.value.trim();
+      const emailValue = E_mail.value.trim();
+      const valuePwd = passeword .value.trim();
+      const valuePwd2 = passeword2.value.trim();
+      
+      if(valuePwd2 === valuePwd){
+         const Success = document.getElementById("success");
+          Success.innerHTML = "Your informations is well saved.";
+          Success.style.color = "green";
+          controle();
+      }
+    }
+    const controle = ()=>{
+
+        let name = document.getElementById("error").innerText= "";
+        let  password = document.getElementById("error_two").innerText= "";
+         let email = document.getElementById("error_tree").innerText= "";
+         let confirm = document.getElementById("error_for").innerText= "";
+
+    }
     
 
-      if(valuePwd2 == ""){
-         const errorFor = document.getElementById("error_for");
-           errorFor.innerHTML = "La confirmation est requis.";
-            errorFor.style.color = "#ff0000";
-         
-      }else if (valuePwd2 != valuePwd){
-         const errorFor = document.getElementById("error_for");
-          errorFor.innerHTML = "refférez vous de votre mot de passe.";
-           errorFor.style.color = "#ff0000";
-      }
-}
+    
+
+  
+
+
+
    
 
     
