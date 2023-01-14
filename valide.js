@@ -87,7 +87,6 @@ const form = document.getElementById("validation").addEventListener("submit",(e)
              errorTwo.style.color ="#ff0000";
 
         }
-
      if(valuePwd2 == ""){
         const errorFor = document.getElementById("error_for");
           errorFor.innerHTML = "The confirmation is required.";
@@ -116,10 +115,10 @@ const form = document.getElementById("validation").addEventListener("submit",(e)
     }
     const controle = ()=>{
 
-        let name = document.getElementById("error").innerText= "";
-        let  password = document.getElementById("error_two").innerText= "";
-         let email = document.getElementById("error_tree").innerText= "";
-         let confirm = document.getElementById("error_for").innerText= "";
+        let name = document.getElementById("error").innerText = "";
+        let  password = document.getElementById("error_two").innerText = "";
+         let email = document.getElementById("error_tree").innerText = "";
+         let confirm = document.getElementById("error_for").innerText = "";
 
     }
     
